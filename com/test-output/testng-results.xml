@@ -2,12 +2,12 @@
 <testng-results ignored="0" total="4" passed="2" failed="1" skipped="1">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-02-18T15:30:32 IST" name="Default suite" finished-at="2022-02-18T15:30:32 IST" duration-ms="48">
+  <suite started-at="2022-02-23T13:00:10 IST" name="Suite" finished-at="2022-02-23T13:00:10 IST" duration-ms="63">
     <groups>
     </groups>
-    <test started-at="2022-02-18T15:30:32 IST" name="Default test" finished-at="2022-02-18T15:30:32 IST" duration-ms="48">
+    <test started-at="2022-02-23T13:00:10 IST" name="Test" finished-at="2022-02-23T13:00:10 IST" duration-ms="63">
       <class name="azureCICD.Test1">
-        <test-method signature="failme()[pri:0, instance:azureCICD.Test1@50ad3bc1]" started-at="2022-02-18T15:30:32 IST" name="failme" finished-at="2022-02-18T15:30:32 IST" duration-ms="9" status="FAIL">
+        <test-method signature="failme()[pri:0, instance:azureCICD.Test1@479ceda0]" started-at="2022-02-23T13:00:10 IST" name="failme" finished-at="2022-02-23T13:00:10 IST" duration-ms="16" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[expected [true] but found [false]]]>
@@ -18,7 +18,7 @@ at org.testng.Assert.fail(Assert.java:110)
 at org.testng.Assert.failNotEquals(Assert.java:1413)
 at org.testng.Assert.assertTrue(Assert.java:56)
 at org.testng.Assert.assertTrue(Assert.java:66)
-at azureCICD.Test1.failme(Test1.java:18)
+at azureCICD.Test1.failme(Test1.java:19)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -53,18 +53,18 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- failme -->
-        <test-method signature="printme()[pri:0, instance:azureCICD.Test1@50ad3bc1]" started-at="2022-02-18T15:30:32 IST" name="printme" finished-at="2022-02-18T15:30:32 IST" duration-ms="1" status="PASS">
+        <test-method signature="printme()[pri:0, instance:azureCICD.Test1@479ceda0]" started-at="2022-02-23T13:00:10 IST" name="printme" finished-at="2022-02-23T13:00:10 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- printme -->
-        <test-method signature="skipme()[pri:0, instance:azureCICD.Test1@50ad3bc1]" started-at="2022-02-18T15:30:32 IST" name="skipme" finished-at="2022-02-18T15:30:32 IST" duration-ms="1" status="SKIP">
+        <test-method signature="skipme()[pri:0, instance:azureCICD.Test1@479ceda0]" started-at="2022-02-23T13:00:10 IST" name="skipme" finished-at="2022-02-23T13:00:10 IST" duration-ms="1" status="SKIP">
           <exception class="org.testng.SkipException">
             <message>
               <![CDATA[i am skip test]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.testng.SkipException: i am skip test
-at azureCICD.Test1.skipme(Test1.java:23)
+at azureCICD.Test1.skipme(Test1.java:25)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -99,11 +99,11 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- skipme -->
-        <test-method signature="whoisme()[pri:0, instance:azureCICD.Test1@50ad3bc1]" started-at="2022-02-18T15:30:32 IST" name="whoisme" finished-at="2022-02-18T15:30:32 IST" duration-ms="1" status="PASS">
+        <test-method signature="whoisme()[pri:0, instance:azureCICD.Test1@479ceda0]" started-at="2022-02-23T13:00:10 IST" name="whoisme" finished-at="2022-02-23T13:00:10 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- whoisme -->
       </class> <!-- azureCICD.Test1 -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>

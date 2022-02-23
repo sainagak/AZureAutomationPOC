@@ -26,7 +26,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -93,7 +93,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">4 methods, 1 failed,  1 skipped,  2 passed</span>
+                    <span class="method-stats">5 methods, 2 failed,  1 skipped,  2 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -105,6 +105,11 @@
                       <span>
                         <img src="failed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="azureCICD.Test1" class="method navigator-link" hash-for-method="failme">failme</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="azureCICD.Test2" class="method navigator-link" hash-for-method="testcaseimplement2(src1, trgt1, hyhu)">testcaseimplement2(src1, trgt1, hyhu)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Suite -->
@@ -172,6 +177,27 @@
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Suite-class-failed -->
+          <div class="suite-Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">azureCICD.Test2</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testcaseimplement2(src1, trgt1, hyhu)">
+                  </a> <!-- testcaseimplement2(src1, trgt1, hyhu) -->
+                  <span class="method-name">testcaseimplement2</span>
+                  <span class="parameters">(src1, trgt1, hyhu)</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [false] but found [true]
+	at azureCICD.Test2.testcaseimplement2(Test2.java:30)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 31 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-failed -->
           <div class="suite-Suite-class-skipped">
             <div class="main-panel-header rounded-window-top">
               <img src="skipped.png"/>
@@ -230,6 +256,7 @@
   &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;azureCICD.Test1&quot;/&gt;
+      &lt;class name=&quot;azureCICD.Test2&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
@@ -243,7 +270,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Test (1 class)</span>
+                <span class="test-name">Test (2 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -269,28 +296,32 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(4);
+data.addRows(5);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'failme')
-data.setCell(0, 2, 'azureCICD.Test1')
-data.setCell(0, 3, 16);
+data.setCell(0, 1, 'testcaseimplement2')
+data.setCell(0, 2, 'azureCICD.Test2')
+data.setCell(0, 3, 199);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'printme')
+data.setCell(1, 1, 'failme')
 data.setCell(1, 2, 'azureCICD.Test1')
-data.setCell(1, 3, 1);
+data.setCell(1, 3, 10);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'skipme')
+data.setCell(2, 1, 'printme')
 data.setCell(2, 2, 'azureCICD.Test1')
 data.setCell(2, 3, 1);
 data.setCell(3, 0, 3)
 data.setCell(3, 1, 'whoisme')
 data.setCell(3, 2, 'azureCICD.Test1')
-data.setCell(3, 3, 0);
+data.setCell(3, 3, 1);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'skipme')
+data.setCell(4, 2, 'azureCICD.Test1')
+data.setCell(4, 3, 1);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 18 ms</span>
+              <span class="suite-total-time">Total running time: 212 ms</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -325,15 +356,24 @@ return data;
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">printme</span>
-                <span class="method-start">26 ms</span>
+                <span class="method-start">18 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">skipme</span>
-                <span class="method-start">28 ms</span>
+                <span class="method-start">21 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">whoisme</span>
-                <span class="method-start">30 ms</span>
+                <span class="method-start">23 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">azureCICD.Test2</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">testcaseimplement2(src1, trgt1, hyhu)</span>
+                <span class="method-start">43 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

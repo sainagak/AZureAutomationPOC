@@ -5,9 +5,11 @@
 		<listener class-name="extentlisteners.ExtentListeners">
 		</listener>
 	</listeners>
-	<test thread-count="5" name="Test">
+	<test name="Test">
 		<classes>
 			<class name="azureCICD.Test1" />
+			<class name="azureCICD.Test2" />
+			
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->

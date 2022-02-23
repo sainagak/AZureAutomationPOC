@@ -12,6 +12,11 @@
           <include name="failme"/>
         </methods>
       </class> <!-- azureCICD.Test1 -->
+      <class name="azureCICD.Test2">
+        <methods>
+          <include name="testcaseimplement2" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- azureCICD.Test2 -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
